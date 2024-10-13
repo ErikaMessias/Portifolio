@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <div class="menu-left">
+                <a href="#experience"><button>Academic background</button></a>
+                <a href="#skills"><button>Skills</button></a>
+                <a href="#contact"><button>Contact</button></a>
+            </div>
+            <div class="menu-right">
+                <a href="https://br.linkedin.com/in/%C3%A9rika-messias-rodrigues-720644203" target="_blank" class="icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com/erika__rodrigues__/" target="_blank" class="icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://github.com/ErikaMessias" target="_blank" class="icon">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <div class="hero">
+        <div class="hero-overlay"></div> 
+        <div class="text-container">
+            <h1>Hi, my name is Érika</h1>
+            <h2>I am a developer</h2>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section">
+          <div class="experience" id="experience">
+            <h2><i class="fas fa-briefcase"></i>My Experience</h2> 
+            <div class="experience-item">2023 - Present<br>Digital Solutions Technician<br>Bosch Brasil</div>
+            <div class="experience-item">2022 - 2022<br>Technical Assistant <br>Bosch Brasil</div>
+            <div class="experience-item">2021 - 2022<br>Systems Development Apprentice<br>Bosch Brasil</div>
+          </div>
+    
+          <div class="education" id="education">
+            <h2><i class="fas fa-graduation-cap"></i>My Education</h2> 
+            <div class="education-item">2022 - 2025<br>Information Systems<br>UNASP</div>
+            <div class="education-item">2021 - 2022<br>Systems Development Technician<br>SENAI Roberto Mange</div>
+            <div class="education-item">2017 - 2019<br>Computer Technician<br>ETEC de Hortolandia</div>
+          </div>
+        </div>
+    
+        <div class="skills" id="skills">
+          <h2><i class="fas fa-tools"></i>My Skills</h2><br>
+          <div class="skills-icons">
+            <div class="skill-item">
+              <img src="image/icon_html.png" alt="HTML">
+              <span>HTML</span>
+            </div>
+            <div class="skill-item">
+              <img src="image/icon_css.png" alt="CSS">
+              <span>CSS</span>
+            </div>
+            <div class="skill-item">
+              <img src="image/icon_python.png" alt="Python">
+              <span>Python</span>
+            </div>
+            <div class="skill-item">
+              <img src="image/icon_sql.png" alt="SQL">
+              <span>SQL</span>
+            </div>
+            <div class="skill-item">
+              <img src="image/vue.png" alt="Vue">
+              <span>Vue</span>
+            </div>
+            <div class="skill-item">
+                <img src="image/sass.png" alt="Sass">
+                <span>Sass</span>
+              </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="Awards" id="Awards">
+        <h2>Awards and Achievements</h2>
+        <div class="education-cards">
+            <div class="card">
+                <img src="image/expo_ensino.jpg" alt="Expo Ensino 2019">
+                <h3>Expo Ensino 2019</h3>
+                <p>We presented our high school capstone project at Expo Ensino, where our theme won first place, giving us the opportunity to showcase it at the Mozilla Festival in London.</p>
+            </div>
+            <div class="card">
+                <img src="image/pense_grande.jpg" alt="Pense Grande 2019">
+                <h3>Pense Grande 2019</h3>
+                <p>We presented our high school capstone project at Pense Grande, where our theme won the national competition.</p>
+            </div>
+            <div class="card">
+                <img src="image/mozilla.jpg" alt="Mozilla Festival 2019">
+                <h3>Mozilla Festival in London 2019</h3>
+                <p>Participation in the Mozilla Festival with the project.</p>
+            </div>
+            <div class="card">
+                <img src="image/senai.jpg" alt="Grand Prix Senai 2021">
+                <h3>Grand Prix Senai 2021</h3>
+                <p>1st Place Nationally in the SENAI Innovation Grand Prix in the 'Advanced Industry 4.0: Shaping the Future of Industry' category, in partnership with Autodesk.</p>
+            </div>
+        </div>
+    </div>
+   
+        <div class="contact" id="contact">
+            <div class="contact-section">
+                <h2>Let's work together!</h2>
+                <p>Feel free to reach out to me at any time.</p>
+                <br>
+            
+            <form action="https://formspree.io/f/xpwzapdl" method="POST">
+                <label>
+                    <input type="name" name="name" placeholder="Name" required>
+                </label>
+                <label>
+                    <input type="email" name="email" placeholder="Email" required>
+                </label>
+                <label>
+                    <textarea name="message" placeholder="Your message here" required></textarea>
+                </label>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p class="copyright">Copyright © 2024 Erika Messias Rodrigues. All rights reserved.</p>
+    </div>
+    
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const heroOverlay = document.querySelector('.hero-overlay');
+            const educationSection = document.querySelector('.education-section');
+
+            const scrollY = window.scrollY;
+            const windowHeight = window.innerHeight;
+
+            const overlayOpacity = Math.min(1, scrollY / (windowHeight - 150)); 
+            heroOverlay.style.background = `rgba(0, 0, 0, ${overlayOpacity})`; 
+
+            if (scrollY + windowHeight > educationSection.offsetTop + 150) {
+                educationSection.classList.add('visible');
+            } else {
+                educationSection.classList.remove('visible');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+    const rows = document.querySelectorAll('.education-table tbody tr:not(.details)');
+
+    rows[0].click();
+});
+
+    </script>
+</body>
+</html>
